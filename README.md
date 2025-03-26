@@ -86,4 +86,10 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. Separating Service and Repository from the Model keeps each part focused on one job. The Model defines the data structure, the Repository handles data storage and retrieval, and the Service manages the business rules and logic. This separation makes the code easier to maintain, test, and update.
+
+2. If we only use the Model, every function would mix together. For example, the Program, Subscriber, and Notification models would handle not only their data but also saving, updating, and business logic. This mix makes the code more complex because each model would need to know too much about the system. It would be harder to change one part without breaking another, testing would become difficult, and the overall design would be less clear.
+
+3. Yes, I've used Postman. It lets me quickly send requests and view responses for our API endpoints. 
+
 #### Reflection Publisher-3

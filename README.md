@@ -93,3 +93,22 @@ This is the place for you to write reflections:
 3. Yes, I've used Postman. It lets me quickly send requests and view responses for our API endpoints. 
 
 #### Reflection Publisher-3
+1. This implementation uses the push model. The publisher sends notifications directly to subscribers when an event happens. Subscribers receive the data without having to request it.
+
+2. #### Advantages of Pull Model:
+
+- Subscribers can fetch only the data they need, reducing unnecessary data transfer.
+
+- They have control over the timing of updates, which can optimize resource usage.
+
+- It can lead to less noise if subscribers are interested in only specific changes.
+
+    #### Disadvantages of Pull Model:
+
+- It adds complexity to the system as subscribers must manage when and how to request data.
+
+- There may be increased latency because updates aren't received immediately.
+
+- Frequent pull requests by many subscribers could lead to higher server load and potential synchronization issues.
+
+3. Without multi-threading, the notification process would run sequentially. This means each subscriber update would block the main thread until it finishes. The overall performance and responsiveness of the program could decrease, especially with many subscribers.

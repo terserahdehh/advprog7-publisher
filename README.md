@@ -78,6 +78,12 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
+1. The Observer pattern in Head First Design Patterns uses an interface to allow different behaviors. In the BambangShop code, the Subscriber is just a struct, which is fine if all subscribers are the same. If different subscriber behaviors are needed later, using a trait would be a better choice.
+
+2. Using a Vec means checking each element to ensure uniqueness, which is slow. A DashMap uses keys, so it can quickly enforce unique ids and urls. Therefore, using DashMap is the better choice here.
+
+3. Using DashMap is still needed. The Singleton pattern handles instance creation but doesn't solve thread safety by itself. DashMap provides built in, efficient thread-safe access, which makes it more suitable for our use case.
+
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
